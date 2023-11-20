@@ -5,7 +5,7 @@ class CreateFurries < ActiveRecord::Migration[7.1]
       t.text :description
       t.float :price
       t.string :fursona
-      t.boolean :avalability
+      t.boolean :availability
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
