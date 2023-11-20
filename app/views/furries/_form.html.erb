@@ -1,0 +1,7 @@
+<%= simple_form_for(furrie) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :fursona, collection: %w(wolf fox dragon puppy cat racoon panda) %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
