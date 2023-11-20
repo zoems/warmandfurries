@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_20_140246) do
     t.text "description"
     t.float "price"
     t.string "fursona"
-    t.boolean "avalability"
+    t.boolean "availability"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
