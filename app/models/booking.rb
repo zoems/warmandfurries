@@ -6,6 +6,7 @@ class Booking < ApplicationRecord
   validates :status, presence: true
   enum status: [ :pending, :rejected, :accepted ]
   validates :total_cost, presence: true
+  validates :range, presence: true
 
 
   private

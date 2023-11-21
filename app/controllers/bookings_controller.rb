@@ -8,9 +8,15 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.furrie = @furrie
     @booking.status = "pending"
+
+    days_booked = params[:booking][:range].split(" to ")
+    @booking.end_date = days_booked[1]
+    @booking.start_date = days_booked[0]
     range = (@booking.end_date - @booking.start_date).to_i
+
     @booking.total_cost = range * @furrie.price
-    if @booking.save
+
+    if @booking.save!
       redirect_to furries_path
     else
       render "furries/show", status: :unprocessable_entity
@@ -30,6 +36,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :total_cost)
+    params.require(:booking).permit(:range)
   end
 end
