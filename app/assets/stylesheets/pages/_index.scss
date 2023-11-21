@@ -1,6 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
 
+@import "show";
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -98,3 +101,4 @@
   font-weight: var(--text-sm-medium-font-weight);
   font-size: var(--text-sm-medium-font-size);
 }
+
