@@ -12,10 +12,10 @@ class BookingsController < ApplicationController
     days_booked = params[:booking][:dates].split(" to ")
     @booking.end_date = days_booked[1]
     @booking.start_date = days_booked[0]
+    # @booking.dates = params[:booking][:dates]
     range = (@booking.end_date - @booking.start_date).to_i
 
     @booking.total_cost = range * @furrie.price
-
     if @booking.save!
       redirect_to furries_path
     else
@@ -36,6 +36,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:range)
+    params.require(:booking).permit(:dates)
   end
 end
