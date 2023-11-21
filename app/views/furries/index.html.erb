@@ -1,11 +1,46 @@
 <h1>Furries#index</h1>
-<p>Find me in app/views/furries/index.html.erb</p>
-<%= @furries.each do |furrie| %>
-
-<%= furrie.name %>
-<%= furrie.description %>
-<%= furrie.price %>
-<%= furrie.fursona%>
-<%= furrie.availability%>
-
-<% end %>
+<p>furry.avaliability</p>
+<div class="container">
+  <div class="heading-and-content">
+    <div class="content">
+      <div class="row">
+            <%= @furries.each do |furrie| %>
+                <div class="blog-post-card">
+                  <div class="image"></div>
+                  <div class="content">
+                    <div class="categories">
+                      <div class="badge">
+                          <div class="badge-base">
+                            <div class="text"><%= furrie.fursona%></div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="heading-and-text">
+                      <div class="heading-and-icon">
+                        <div class="heading"><%= furrie.name %></div>
+                        <div class="icon-wrap"> <i class="fa-solid fa-up-right-from-square"></i> </div>
+                      </div>
+                      <p class="content-text">
+                        <%= furrie.description %>
+                      </p>
+                      <div class="price"><%= furrie.price.to_i%> Euros</div>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+      </div>
+    </div>
+  </div>
+      <div class="pagination">
+      <button class="button">
+        <button class="button-base">
+          <img class="img" src="img/arrow-left.png" />
+          <div class="text">Logout</div>
+        </button>
+      </button>
+      <button class="button">
+        <div class="div">
+          <div class="text">Dashboard</div>
+          <img class="img" src="img/arrow-right.png" />
+        </div>
+</div>
