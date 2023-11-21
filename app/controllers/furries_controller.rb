@@ -13,7 +13,6 @@ class FurriesController < ApplicationController
     @furrie.bookings.each do |booking|
       @dates_booked.push({ from: booking[:start_date], to: booking[:end_date] })
     end
-    raise
   end
 
   # def new
