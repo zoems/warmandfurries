@@ -1,4 +1,5 @@
-.blog-post-card {
+
+.furries-card {
   display: flex;
   flex-direction: column;
   width: 384px;
@@ -6,7 +7,7 @@
   position: relative;
 }
 
-.blog-post-card .image {
+.furries-card .image {
   position: relative;
   align-self: stretch;
   width: 100%;
@@ -16,7 +17,7 @@
   background-position: 50% 50%;
 }
 
-.blog-post-card .content {
+.furries-card .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26,10 +27,10 @@
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-  background-color: #000000e3;
+  background-color: $background_black;
 }
 
-.blog-post-card .categories {
+.furries-card .categories {
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -39,33 +40,33 @@
   flex: 0 0 auto;
 }
 
-.blog-post-card .badge {
+.furries-card .badge {
   display: inline-flex;
   align-items: flex-start;
   position: relative;
   flex: 0 0 auto;
 }
 
-.blog-post-card .badge-base {
+.furries-card .badge-base {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 2px 10px;
   position: relative;
   flex: 0 0 auto;
-  background-color: var(--x-2);
+  background-color: $purple-2;
   border-radius: 16px;
   opacity: 0.8;
 }
 
 
-.blog-post-card .text {
+.furries-card .text {
   position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: var(--text-sm-medium-font-family);
   font-weight: var(--text-sm-medium-font-weight);
-  color: var(--x-1);
+  color: $purple-1;
   font-size: var(--text-sm-medium-font-size);
   text-align: center;
   letter-spacing: var(--text-sm-medium-letter-spacing);
@@ -74,7 +75,7 @@
   font-style: var(--text-sm-medium-font-style);
 }
 
-.blog-post-card .heading-and-text {
+.furries-card .heading-and-text {
   flex-direction: column;
   gap: 12px;
   display: flex;
@@ -85,7 +86,7 @@
   flex: 0 0 auto;
 }
 
-.blog-post-card .heading-and-icon {
+.furries-card .heading-and-icon {
   gap: 16px;
   display: flex;
   align-items: flex-start;
@@ -95,43 +96,43 @@
   flex: 0 0 auto;
 }
 
-.blog-post-card .heading {
+.furries-card .heading {
   position: relative;
   flex: 1;
   margin-top: -1px;
   font-family: var(--display-xs-semibold-font-family);
   font-weight: var(--display-xs-semibold-font-weight);
-  color: var(--x-2);
+  color: $purple-2;
   font-size: var(--display-xs-semibold-font-size);
   letter-spacing: var(--display-xs-semibold-letter-spacing);
   line-height: var(--display-xs-semibold-line-height);
   font-style: var(--display-xs-semibold-font-style);
 }
 
-.blog-post-card .icon-wrap {
+.furries-card .icon-wrap {
   position: relative;
   flex: 0 0 auto;
-  color: var(--x-1)
+  color: $purple-1
 }
 
-.blog-post-card .content-text {
+.furries-card .content-text {
   position: relative;
   align-self: stretch;
   font-family: var(--content-font-family);
   font-weight: var(--content-font-weight);
-  color: content_text_blue;
+  color: $content_text_blue;
   font-size: var(--content-font-size);
   letter-spacing: var(--content-letter-spacing);
   line-height: var(--content-line-height);
   font-style: var(--content-font-style);
 }
 
-.blog-post-card .price {
+.furries-card .price {
   position: relative;
   align-self: stretch;
   font-family: var(--text-sm-semibold-font-family);
   font-weight: var(--text-sm-semibold-font-weight);
-  color: var(--x-1);
+  color: $purple-1;
   font-size: var(--text-sm-semibold-font-size);
   text-align: right;
   letter-spacing: var(--text-sm-semibold-letter-spacing);
