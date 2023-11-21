@@ -1,10 +1,27 @@
 
 
 <h1>Furries#index</h1>
+<div class="header">
+      <div class="logo">
+        <img class="chip" src="img/chip.svg" />
+        <div class="warm-furries">warm &amp; furries</div>
+      </div>
+      <div class="text-input">
+        <img class="search" src="img/search.svg" />
+        <div class="value">notworkingcurrently</div>
+      </div>
+      <div class="btn-padding">
+        <div class="button-title btn-text"><%= link_to "Dashboard", new_user_session_path  %></div>
+      </div>
+      <div class="btn-padding">
+        <div class="button-title btn-text"><%= link_to "Sign In" , new_user_session_path  %></div></div>
+      </div>
+    </div>
+
 <div class="container" id="index-container">
     <div class="content">
       <div class="row">
-            <%= @furries.each do |furrie| %>
+            <% @furries.each do |furrie| %>
                 <div class="furries-card">
                   <div class="image"></div>
                   <div class="content">
@@ -19,7 +36,7 @@
                       <div class="heading-and-icon">
                         <div class="heading"><%= furrie.name %></div>
                         <div class="icon-wrap">
-                          <%= link_to furrie.name, furry_path(furrie) %>
+                          <%= link_to furry_path(furrie) %>
                           <i class="fa-solid fa-up-right-from-square"></i>
                         </div>
                       </div>
