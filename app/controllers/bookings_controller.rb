@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     days_booked = params[:booking][:dates].split(" to ")
     @booking.end_date = days_booked[1]
     @booking.start_date = days_booked[0]
-    # @booking.dates = params[:booking][:dates]
+
     range = (@booking.end_date - @booking.start_date).to_i
 
     @booking.total_cost = range * @furrie.price
