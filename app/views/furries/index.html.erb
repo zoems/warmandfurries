@@ -1,12 +1,12 @@
 
 
 <h1>Furries#index</h1>
-<div class="container">
+<div class="container" id="index-container">
   <div class="heading-and-content">
     <div class="content">
       <div class="row">
             <%= @furries.each do |furrie| %>
-                <div class="blog-post-card">
+                <div class="furries-card">
                   <div class="image"></div>
                   <div class="content">
                     <div class="categories">
@@ -19,9 +19,9 @@
                     <div class="heading-and-text">
                       <div class="heading-and-icon">
                         <div class="heading"><%= furrie.name %></div>
-                        <div class="icon-wrap"> 
-                          <%= link_to furrie.name, furry_path(furrie) %> 
-                          <i class="fa-solid fa-up-right-from-square"></i> 
+                        <div class="icon-wrap">
+                          <%= link_to furrie.name, furry_path(furrie) %>
+                          <i class="fa-solid fa-up-right-from-square"></i>
                         </div>
                       </div>
                       <p class="content-text">
@@ -37,14 +37,10 @@
   </div>
       <div class="pagination">
       <button class="button">
-        <button class="button-base">
-          <img class="img" src="img/arrow-left.png" />
-          <div class="text">Logout</div>
-        </button>
+          <div class="btn">Logout</div>
       </button>
       <button class="button">
         <div class="div">
           <div class="text">Dashboard</div>
-          <img class="img" src="img/arrow-right.png" />
         </div>
 </div>
