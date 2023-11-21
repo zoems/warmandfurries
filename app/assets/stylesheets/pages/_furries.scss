@@ -9,18 +9,6 @@
   background-color: $background_black;
 }
 
-#index-container .heading-and-content {
-  flex-direction: column;
-  width: 1216px;
-  gap: 64px;
-  mix-blend-mode: screen;
-  overflow-x: scroll;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  flex: 0 0 auto;
-}
-
 #index-container .content {
   flex-direction: column;
   gap: 48px;
@@ -41,51 +29,4 @@
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-
-
-
-#index-container .pagination {
-  display: flex;
-  height: 63px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0px 0px;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  margin: 1px ,1px ,1px;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-color: $purple-2;
-}
-
-#index-container .button {
-  align-items: flex-start;
-  display: inline-flex;
-  position: relative;
-  flex: 0 0 auto;
-  all: unset;
-  box-sizing: border-box;
-}
-
-#index-container .button-base {
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  display: inline-flex;
-  position: relative;
-  flex: 0 0 auto;
-  color: red;
-}
-
-#index-container .footer-button {
-  color: $purple-1;
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: var(--text-sm-medium-font-family);
-  font-weight: var(--text-sm-medium-font-weight);
-  font-size: var(--text-sm-medium-font-size);
 }

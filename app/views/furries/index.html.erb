@@ -2,7 +2,6 @@
 
 <h1>Furries#index</h1>
 <div class="container" id="index-container">
-  <div class="heading-and-content">
     <div class="content">
       <div class="row">
             <%= @furries.each do |furrie| %>
@@ -34,13 +33,17 @@
             <% end %>
       </div>
     </div>
-  </div>
-      <div class="pagination">
-      <button class="button">
-          <div class="btn">Logout</div>
-      </button>
-      <button class="button">
-        <div class="div">
-          <div class="text">Dashboard</div>
+    <div class="pagination">
+          <button class="button">
+            <button class="button-base">
+              <div class="text">Logout</div>
+            </button>
+
+          </button>
+          <button class="button">
+            <div class="div">
+              <div class="text">Dashboard</div>
+            </div>
+          </button>
         </div>
 </div>
