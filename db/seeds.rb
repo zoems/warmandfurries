@@ -10,6 +10,7 @@
 
 Furrie.destroy_all
 User.destroy_all
+Furrie.destroy_all
 
 user = User.create(email: "mawberrie@gmail.com", password: "helloworld")
 
