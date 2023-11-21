@@ -1,12 +1,18 @@
 <h1>Furries#show</h1>
 <p>Find me in app/views/furries/show.html.erb</p>
-<h1><%= @furrie.name %></h1>
-  <%= @furrie.description %>
-  <%= @furrie.price %>
-  <%= @furrie.fursona %>
-  <%= @furrie.availability %>
 
+<div class="container">
+  <div class="row col-6">
+    <div><img src="https://i.pinimg.com/474x/4f/d7/e5/4fd7e523ce3fd34735bb913ef2cba52a.jpg" alt=""></div>
+    <div>
+      <h1><%= @furrie.name %></h1>
+      <h3 class="text-muted"><%= @furrie.fursona %></h3>
+      <%= @furrie.description %>
+      <div>
+        <h5>Price per night: <%= @furrie.price %> € </h5>
+      </div>
+  </div>
 
-<div class="p-6">
+<div class="p-6" >
   <%= render "bookings/form", booking: @booking, furrie: @furrie %>
 </div>
