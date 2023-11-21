@@ -4,7 +4,9 @@ class Booking < ApplicationRecord
   validates :start_date, :end_date, presence: true # availability: true
   validate :end_date_after_start_date
   validates :status, presence: true
+  enum status: [ :pending, :rejected, :accepted ]
   validates :total_cost, presence: true
+
 
   private
 

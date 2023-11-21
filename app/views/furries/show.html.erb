@@ -5,3 +5,8 @@
   <%= @furrie.price %>
   <%= @furrie.fursona %>
   <%= @furrie.availability %>
+
+
+<div class="p-6">
+  <%= render "bookings/form", booking: @booking, furrie: @furrie %>
+</div>
