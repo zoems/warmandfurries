@@ -10,3 +10,41 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// style guide
+:root {
+  --x-1: rgba(119, 67, 219, 1);
+  --x-2: rgba(195, 172, 208, 1);
+  --x-3: rgba(247, 239, 229, 1);
+  --x-4: rgba(255, 251, 245, 1);
+  --x-5: rgba(249, 245, 255, 1);
+  --primary-700: rgba(105, 65, 198, 1);
+  --content-font-family: "Inter-Regular", Helvetica;
+  --content-font-weight: 400;
+  --content-font-size: 16px;
+  --content-letter-spacing: 0px;
+  --content-line-height: 24px;
+  --content-font-style: normal;
+  --text-sm-medium-font-family: "Inter-Medium", Helvetica;
+  --text-sm-medium-font-weight: 500;
+  --text-sm-medium-font-size: 14px;
+  --text-sm-medium-letter-spacing: 0px;
+  --text-sm-medium-line-height: 20px;
+  --text-sm-medium-font-style: normal;
+  --display-xs-semibold-font-family: "Inter-SemiBold", Helvetica;
+  --display-xs-semibold-font-weight: 600;
+  --display-xs-semibold-font-size: 24px;
+  --display-xs-semibold-letter-spacing: 0px;
+  --display-xs-semibold-line-height: 32px;
+  --display-xs-semibold-font-style: normal;
+  --text-sm-semibold-font-family: "Inter-SemiBold", Helvetica;
+  --text-sm-semibold-font-weight: 600;
+  --text-sm-semibold-font-size: 14px;
+  --text-sm-semibold-letter-spacing: 0px;
+  --text-sm-semibold-line-height: 20px;
+  --text-sm-semibold-font-style: normal;
+  --variable-collection-not-sure-background: rgba(255, 255, 255, 1);
+  --variable-collection-grey-purple: rgba(72, 61, 92, 0.85);
+  --variable-collection-light-blue-grey: rgba(102, 112, 133, 1);
+  --variable-collection-content-colour: rgba(217, 230, 255, 1);
+}
