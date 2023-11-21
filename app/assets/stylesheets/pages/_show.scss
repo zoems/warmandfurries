@@ -1,7 +1,12 @@
-.container {
+.show-page {
   display: flex;
 }
 
-.row {
+.info-furrie {
   flex-wrap: nowrap;
+  background-color: rgba(195, 172, 208, 1)
+}
+
+.form-show {
+  background-color: white;
 }
