@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
     @booking.status = "pending"
 
     days_booked = params[:booking][:dates].split(" to ")
+
     @booking.end_date = days_booked[1]
     @booking.start_date = days_booked[0]
 
