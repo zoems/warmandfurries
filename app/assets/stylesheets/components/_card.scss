@@ -161,3 +161,11 @@
   line-height: var(--text-sm-semibold-line-height);
   font-style: var(--text-sm-semibold-font-style);
 }
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  }
