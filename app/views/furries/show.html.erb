@@ -1,7 +1,7 @@
 <div class="container" id="show-page">
   <div class="d-flex info-furry justify-content-around">
     <div class="px-3">
-      <%= cl_image_tag @furry.photo.key, crop: :fill %>
+      <%= cl_image_tag @furry.photo.key, height: 400, width: 400, crop: :fill %>
       <%# <img src="https://i.pinimg.com/474x/4f/d7/e5/4fd7e523ce3fd34735bb913ef2cba52a.jpg" alt=""> %>
     </div>
       <div class="d-flex flex-column">
