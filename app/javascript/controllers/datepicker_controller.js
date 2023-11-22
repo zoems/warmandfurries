@@ -4,12 +4,15 @@ import flatpickr from "flatpickr";
 export default class extends Controller {
 
   static values = {
-    minDate: String
+    minDate: String,
+    disable: Array
   }
 
   connect() {
+    console.log(this.disableValue)
     flatpickr(this.element, {
       mode: "range",
-      minDate: this.minDateValue})
+      minDate: this.minDateValue,
+      disable: this.disableValue})
   }
 }
