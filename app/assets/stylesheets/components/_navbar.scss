@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $background_black;
+  background: $purple4;
   overflow: hidden;
   z-index: 9999;
 }
@@ -25,4 +25,22 @@
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.form-control {
+  width: 500px;
+  border-radius: 10px;
+  background-color: $purple-2;
+}
+
+.navbar-lewagon .nav-link {
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color:white
+}
+
+.fa-paw {
+  font-size: 50px;
+  padding-top: 15px;
 }
