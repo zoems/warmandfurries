@@ -1,4 +1,9 @@
 // Specific CSS for your home-page
+body {
+  background-color: #131117;
+  text-decoration: none;
+}
+
 #index-container {
   display: flex;
   flex-direction: column;
@@ -7,6 +12,7 @@
   padding: 32px;
   position: relative;
   background-color: $background_black;
+  padding-top: 60px;
 }
 
 #index-container .content {
