@@ -7,7 +7,6 @@ class CreateBookings < ActiveRecord::Migration[7.1]
       t.float :total_cost
       t.references :furry, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
-
       t.timestamps
     end
   end
