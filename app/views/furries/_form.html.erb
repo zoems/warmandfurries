@@ -3,5 +3,6 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :fursona, collection: %w(wolf fox dragon puppy cat racoon panda) %>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
