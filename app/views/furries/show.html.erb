@@ -9,14 +9,14 @@
       <div class="col-6 d-flex flex-column">
         <div class="furrie-description">
           <h1><%= @furrie.name %></h1>
-         <h3><%= @furrie.fursona %></h3>
-         <p><%= @furrie.description %></p>
-       <div>
-         <h5>Price per night: <%= @furrie.price.to_i %> € </h5>
-       </div>
+          <h3><%= @furrie.fursona %></h3>
+          <p><%= @furrie.description %></p>
+          <div>
+            <h5>Price per night: <%= @furrie.price.to_i %> € </h5>
+          </div>
         </div>
 
-       <div class="p-6 form-show col-6>
+      <div class="p-6 form-show col-6">
       <%= render "bookings/form", booking: @booking, furrie: @furrie %>
     </div>
     </div>
