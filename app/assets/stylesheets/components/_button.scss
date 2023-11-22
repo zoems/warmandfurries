@@ -1,5 +1,10 @@
 .btn {
-  background-color: $purple-1;
+  background-color: $purple3;
   color: white;
   border-radius: 10px;
+
+  &:hover {
+    background-color: $purple-1;
+    color: white
+  }
 }
