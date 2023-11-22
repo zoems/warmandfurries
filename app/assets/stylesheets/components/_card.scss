@@ -32,7 +32,7 @@
 
 .furries-card .content:hover {
   background-color: $cardbackground2;
-  opacity: 0.8;
+  ;
 }
 
 .hvr-grow {
@@ -154,8 +154,8 @@
   align-self: stretch;
   font-family: var(--text-sm-semibold-font-family);
   font-weight: var(--text-sm-semibold-font-weight);
-  color: $purple-1;
-  font-size: var(--text-sm-semibold-font-size);
+  color: $purple-2;
+  font-size: 26px;
   text-align: right;
   letter-spacing: var(--text-sm-semibold-letter-spacing);
   line-height: var(--text-sm-semibold-line-height);
