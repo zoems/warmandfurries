@@ -1,9 +1,9 @@
-<h1>Create a new booking</h1>
+<h2>Book this furrie!</h2>
 <%= simple_form_for [furrie, booking] do |f| %>
   <%= f.input :dates, as: :string, input_html: {
     data: {
       controller: "datepicker",
       datepicker_min_date_value: Date.today.to_s,
       datepicker_disable_value: @dates_booked } } %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn" %>
 <% end %>
