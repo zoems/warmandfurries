@@ -3,9 +3,9 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @furrie = Furrie.find(params[:furry_id])
+    @furry = Furry.find(params[:furry_id])
     @booking.user = current_user
-    @booking.furrie = @furrie
+    @booking.furry = @furry
     @booking.status = "pending"
 
     days_booked = params[:booking][:dates].split(" to ")
@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
 
     range = (@booking.end_date - @booking.start_date).to_i
 
-    @booking.total_cost = range * @furrie.price
+    @booking.total_cost = range * @furry.price
     if @booking.save!
       redirect_to furries_path
     else
@@ -23,9 +23,9 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    @furrie_id = @booking.furrie_id
+    @furry_id = @booking.furry_id
     @booking.destroy
-    redirect_to furry_path(@furrie_id)
+    redirect_to furry_path(@furry_id)
   end
 
   private

@@ -6,29 +6,29 @@
   color: $purple-2;
 }
 
-.info-furrie {
+.info-furry {
   flex-wrap: nowrap;
 }
 
-.furrie-description{
+.furry-description{
   flex-grow: 1;
 }
 
-.furrie-description h3, p {
+.furry-description h3, p {
   color: white;
 }
 
-.furrie-description h3 {
+.furry-description h3 {
   opacity: 0.75;
   text-shadow: 1px 1px 2px white;
 }
 
-.furrie-description h5 {
+.furry-description h5 {
   font-weight:bolder;
   color: $purple-1;
   font-size: 32px;
 }
 
-.info-furrie img {
+.info-furryimg {
   border-radius: 10px;
 }

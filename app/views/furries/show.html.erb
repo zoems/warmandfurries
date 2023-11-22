@@ -1,20 +1,20 @@
 <div class="container" id="show-page">
-  <div class="d-flex info-furrie justify-content-around">
+  <div class="d-flex info-furry justify-content-around">
     <div class="px-3">
-      <%= cl_image_tag @furrie.photo.key, crop: :fill %>
+      <%= cl_image_tag @furry.photo.key, crop: :fill %>
       <%# <img src="https://i.pinimg.com/474x/4f/d7/e5/4fd7e523ce3fd34735bb913ef2cba52a.jpg" alt=""> %>
     </div>
       <div class="d-flex flex-column">
-        <div class="furrie-description">
-          <h1><%= @furrie.name %></h1>
-          <h3><%= @furrie.fursona %></h3>
-          <p><%= @furrie.description %></p>
+        <div class="furry-description">
+          <h1><%= @furry.name %></h1>
+          <h3><%= @furry.fursona %></h3>
+          <p><%= @furry.description %></p>
           <div>
-            <h5>Price per night: <%= @furrie.price.to_i %> € </h5>
+            <h5>Price per night: <%= @furry.price.to_i %> € </h5>
           </div>
         </div>
       <div class="p-6 form-show col-6">
-        <%= render "bookings/form", booking: @booking, furrie: @furrie %>
+        <%= render "bookings/form", booking: @booking, furry:@furry%>
       </div>
     </div>
   </div>

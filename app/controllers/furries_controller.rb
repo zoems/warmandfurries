@@ -1,28 +1,28 @@
 class FurriesController < ApplicationController
-  before_action :set_furrie, only: %i[show destroy]
+  before_action :set_furry, only: %i[show destroy]
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @furries = Furrie.all
+    @furries = Furry.all
   end
 
   def show
     @booking = Booking.new
     # Get an array of hashes witht he start and end date
     @dates_booked = []
-    @furrie.bookings.each do |booking|
+    @furry.bookings.each do |booking|
       @dates_booked.push({ from: booking[:start_date], to: booking[:end_date] })
     end
   end
 
   def new
-    @furrie = Furrie.new
+    @furry = Furry.new
   end
 
   def create
-    @furrie = Furrie.new(furrie_params)
-    @furrie.user = current_user
-    if @furrie.save
+    @furry = Furry.new(furry_params)
+    @furry.user = current_user
+    if @furry.save
       redirect_to furries_path
     else
       render :new, status: :unprocessable_entity
@@ -30,17 +30,17 @@ class FurriesController < ApplicationController
   end
 
   def destroy
-    @furrie.destroy
+    @furry.destroy
     redirect_to furries_path
   end
 
   private
 
-  def set_furrie
-    @furrie = Furrie.find(params[:id])
+  def set_furry
+    @furry = Furry.find(params[:id])
   end
 
-  def furrie_params
-    params.require(:furrie).permit(:name, :description, :price, :fursona, :photo)
+  def furry_params
+    params.require(:furry).permit(:name, :description, :price, :fursona, :photo)
   end
 end
