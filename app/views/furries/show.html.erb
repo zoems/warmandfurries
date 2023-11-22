@@ -7,11 +7,13 @@
       <div class="d-flex flex-column">
         <div class="furry-description col-9">
           <h1><%= @furry.name %></h1>
-          <h3><%= @furry.fursona %></h3>
+          <h3><%= @furry.fursona.capitalize %></h3>
           <p><%= @furry.description %></p>
           <div>
             <h5>Price per night: <%= @furry.price.to_i %> € </h5>
           </div>
+          <br>
+          <br>
         </div>
       <div class="p-6 form-show col-6">
         <%= render "bookings/form", booking: @booking, furry:@furry%>
