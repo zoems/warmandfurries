@@ -36,8 +36,9 @@
                       <div class="heading-and-icon">
                         <div class="heading"><%= furrie.name %></div>
                         <div class="icon-wrap">
-                          <%= link_to furry_path(furrie) %>
-                          <i class="fa-solid fa-up-right-from-square"></i>
+                          <%= link_to furry_path(furrie) do %>
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                          <% end %>
                         </div>
                       </div>
                       <p class="content-text">
