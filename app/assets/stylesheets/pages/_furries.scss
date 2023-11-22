@@ -12,18 +12,7 @@ body {
   padding: 32px;
   position: relative;
   background-color: $background_black;
-  padding-top: 60px;
-}
-
-#index-container .content {
-  flex-direction: column;
-  gap: 48px;
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  align-self: stretch;
-  width: 100%;
-  flex: 0 0 auto;
+  padding-top: 128px;
 }
 
 #index-container .row {
