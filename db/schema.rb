@@ -47,12 +47,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_22_104310) do
     t.date "end_date"
     t.integer "status"
     t.float "total_cost"
-    t.bigint "furrie_id", null: false
+    t.bigint "furry_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "dates"
-    t.index ["furrie_id"], name: "index_bookings_on_furrie_id"
+    t.index ["furry_id"], name: "index_bookings_on_furry_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -82,7 +82,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_22_104310) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bookings", "furries", column: "furrie_id"
+  add_foreign_key "bookings", "furries", column: "furry_id"
   add_foreign_key "bookings", "users"
   add_foreign_key "furries", "users"
 end

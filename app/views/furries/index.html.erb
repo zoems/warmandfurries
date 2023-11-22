@@ -2,32 +2,32 @@
 <div class="container" id="index-container">
     <div class="content">
       <div class="row">
-            <% @furries.each do |furrie| %>
+            <% @furries.each do |furry| %>
                 <div class="furries-card">
                   <div class="image">
-                    <%# <%= cl_image_tag furrie.photo.key, crop: :fill %>
+                    <%# <%= cl_image_tag furry.photo.key, crop: :fill %>
                   </div>
                   <div class="content">
                     <div class="categories">
                       <div class="badge">
                           <div class="badge-base">
-                            <div class="text"><%= furrie.fursona%></div>
+                            <div class="text"><%= furry.fursona%></div>
                           </div>
                       </div>
                     </div>
                     <div class="heading-and-text">
                       <div class="heading-and-icon">
-                        <div class="heading"><%= furrie.name %></div>
+                        <div class="heading"><%= furry.name %></div>
                         <div class="icon-wrap">
-                          <%= link_to furry_path(furrie) do %>
+                          <%= link_to furry_path(furry) do %>
                             <i class="fa-solid fa-up-right-from-square"></i>
                           <% end %>
                         </div>
                       </div>
                       <p class="content-text">
-                        <%= furrie.description %>
+                        <%= furry.description %>
                       </p>
-                      <div class="price"><%= furrie.price.to_i%> Euros</div>
+                      <div class="price"><%= furry.price.to_i%> Euros</div>
                     </div>
                   </div>
                 </div>
