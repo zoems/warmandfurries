@@ -15,19 +15,19 @@ class FurriesController < ApplicationController
     end
   end
 
-  # def new
-  #   @furrie = Furrie.new
-  # end
+  def new
+    @furrie = Furrie.new
+  end
 
-  # def create
-  #   @furrie = Furrie.new(furrie_params)
-  #   # add user id
-  #   if @furrie.save
-  #     redirect_to furries_path
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
+  def create
+    @furrie = Furrie.new(furrie_params)
+    @furrie.user = current_user
+    if @furrie.save
+      redirect_to furries_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
   def destroy
     @furrie.destroy
@@ -41,6 +41,6 @@ class FurriesController < ApplicationController
   end
 
   def furrie_params
-    params.require(:furrie).permit(:name, :description, :price, :fursona, :availibility)
+    params.require(:furrie).permit(:name, :description, :price, :fursona, :photo)
   end
 end
