@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $background_black;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.container-fluid {
+  justify-content: space-around !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,4 +19,10 @@
 
 .navbar-lewagon .nav-link {
   color: $purple-1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
