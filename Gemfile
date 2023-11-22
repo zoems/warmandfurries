@@ -53,6 +53,9 @@ gem "sassc-rails"
 # User management
 gem "devise"
 
+# Image storage
+gem "cloudinary"
+
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

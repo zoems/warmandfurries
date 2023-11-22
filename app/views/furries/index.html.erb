@@ -4,7 +4,9 @@
       <div class="row">
             <% @furries.each do |furrie| %>
                 <div class="furries-card">
-                  <div class="image"></div>
+                  <div class="image">
+                    <%# <%= cl_image_tag furrie.photo.key, crop: :fill %>
+                  </div>
                   <div class="content">
                     <div class="categories">
                       <div class="badge">
