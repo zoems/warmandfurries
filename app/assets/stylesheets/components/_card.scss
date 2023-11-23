@@ -162,6 +162,7 @@
   letter-spacing: var(--text-sm-semibold-letter-spacing);
   line-height: var(--text-sm-semibold-line-height);
   font-style: var(--text-sm-semibold-font-style);
+  text-shadow: 3px 3px 2px #000;
 }
 
 .card-link {
@@ -171,3 +172,11 @@
   left: 0;
   width: 100%;
   }
+
+  // .hide {
+  //   display: none;
+
+  //   &:hover {
+  //     display: block ;
+  //   }
+  // }
