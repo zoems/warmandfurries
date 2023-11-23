@@ -41,7 +41,13 @@
 }
 
 .fa-paw {
-  font-size: 50px;
+  font-size: 48px;
   padding-top: 15px;
   color:$purple-2;
+  text-shadow: 1px 1px 2px rgb(198, 121, 240), 0 0 1em rgb(48, 26, 67), 0 0 0.2em rgb(66, 31, 119);
+  margin: 0px 15px;
+}
+
+.nav-item {
+  margin: 0px 15px;
 }

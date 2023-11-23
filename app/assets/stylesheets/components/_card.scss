@@ -122,13 +122,14 @@
   position: relative;
   flex: 1;
   margin-top: -1px;
-  font-family: var(--display-xs-semibold-font-family);
+ // font-family: var(--display-xs-semibold-font-family);
   font-weight: var(--display-xs-semibold-font-weight);
   color: $purple-2;
   font-size: var(--display-xs-semibold-font-size);
   letter-spacing: var(--display-xs-semibold-letter-spacing);
   line-height: var(--display-xs-semibold-line-height);
   font-style: var(--display-xs-semibold-font-style);
+  text-shadow: 3px 3px 2px #000;
 }
 
 .furries-card .icon-wrap {
@@ -140,8 +141,9 @@
 .furries-card .content-text {
   position: relative;
   align-self: stretch;
-  font-family: var(--content-font-family);
-  font-weight: var(--content-font-weight);
+  //font-family: var(--content-font-family);
+  //font-weight: var(--content-font-weight);
+  font-weight:300;
   color: $content_text_blue;
   font-size: var(--content-font-size);
   letter-spacing: var(--content-letter-spacing);
