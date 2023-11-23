@@ -1,5 +1,5 @@
 <div class="container" id="index-container">
-    <div class="content">
+    <div class="content" >
       <div class="row">
             <% @furries.each do |furry| %>
                 <div class="furries-card hvr-grow">
@@ -25,10 +25,11 @@
                       </p>
                       <div class="price"><%= furry.price.to_i%> <i class="fa-solid fa-euro-sign"></i></div>
                     </div>
-                    <%= link_to '', furry_path(furry), class: 'card-link'  %>
+                    <%= link_to '', furry_path(furry), class: 'card-link' %>
                   </div>
                 </div>
             <% end %>
       </div>
     </div>
+
 </div>

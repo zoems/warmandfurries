@@ -6,6 +6,18 @@ class FurriesController < ApplicationController
     @furries = Furry.all
   end
 
+  def map
+    @furries = Furry.all
+    @markers = @furries.geocoded.map do |furry|
+      {
+        lat: furry.latitude,
+        lng: furry.longitude,
+        info_window_html: render_to_string(partial: "furries/info_window", locals: { furry: furry }),
+        marker_html: render_to_string(partial: "furries/marker", locals: { furry: furry })
+      }
+    end
+  end
+
   def show
     @booking = Booking.new
     # Get an array of hashes witht he start and end date
