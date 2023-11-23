@@ -7,6 +7,17 @@ class BookingsController < ApplicationController
     @my_furries_bookings = current_user.bookings_as_owner
   end
 
+  def update
+    @answer = params[:commit]
+    @booking = Booking.find(params[:id])
+    if @answer == "reject"
+      @booking.rejected!
+    elsif @anwser == "accept"
+      @booking.accepted!
+    end
+    redirect_to booking_path
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @furry = Furry.find(params[:furry_id])
