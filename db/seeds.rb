@@ -13,6 +13,7 @@ description: "Luna Nightpaw, a nocturnal wolf with obsidian fur, luminescent sap
 price: 480,
 fursona: "wolf",
 availability: true,
+address: "Hauptstraße 13, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "wolf-furry.png", content_type: "image/png")
 
@@ -23,6 +24,7 @@ description: "Mutty Puppup, a canine charmer of varied lineage, flaunts a fur me
 price: 550,
 fursona: "puppy",
 availability: true,
+address: "Stresemannstraße 72, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "puppy-furry.png", content_type: "image/png")
 
@@ -32,6 +34,7 @@ description: "Astra Stardust, a celestial feline with a coat resembling a starli
 price: 600,
 fursona: "cat",
 availability: true,
+address: "Thiemannstraße 1, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "cat-furry.png", content_type: "image/png")
 
@@ -42,6 +45,7 @@ description: "Bamboo Ironclaw, embodies a harmonious blend of strength and tranq
 price: 700,
 fursona: "panda",
 availability: true,
+address: "Ohlauer Str. 38, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "panda-furry.png", content_type: "image/png")
 
@@ -52,5 +56,6 @@ description: "Mischief Nightshade, a raccoon whose fur is a canvas of moonlit gr
 price: 800,
 fursona: "racoon",
 availability: true,
+address: "Revaler Str. 99, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "racoon-furry.png", content_type: "image/png")
