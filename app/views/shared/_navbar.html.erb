@@ -22,22 +22,26 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <div class="nav-item active mx-3">
-            <%= link_to "Dashboard", "root_path" , class: "btn nav-link" %>
-          </div>
-
-          <div class="nav-item dropdown">
+          <li class="nav-item active mx-3">
+            <%= link_to "Dashboard", "root_path", class: "btn nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
             <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%#= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
-          </div>
+          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+      </ul>
+    </div>>
       </div>
   <%# </div> %>
 </div>
