@@ -11,10 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "furries#index"
+  resources :bookings, only: [:index, :destroy, :update]
 
   resources :furries, only: [:index, :show, :new, :create, :destroy] do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :bookings, only: :destroy
 end

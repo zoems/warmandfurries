@@ -30,7 +30,7 @@
   background-color: $cardbackground;
 }
 
-.furries-card .content:hover {
+.furries-card:hover .content {
   background-color: $cardbackground2;
   ;
 }
@@ -162,6 +162,7 @@
   letter-spacing: var(--text-sm-semibold-letter-spacing);
   line-height: var(--text-sm-semibold-line-height);
   font-style: var(--text-sm-semibold-font-style);
+  text-shadow: 3px 3px 2px #000;
 }
 
 .card-link {
@@ -170,4 +171,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .myDIV:hover .hide {
+    display: block;
   }

@@ -4,6 +4,10 @@ class FurriesController < ApplicationController
 
   def index
     @furries = Furry.all
+    if params[:search].present?
+      @query = params[:search][:query]
+      @furries = @furries.where("name ILIKE ?", "%#{@query}%")
+    end
   end
 
   def map

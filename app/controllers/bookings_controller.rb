@@ -1,6 +1,23 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[destroy]
 
+  def index
+    @mybookings = current_user.bookings
+    @myfurries = current_user.furries
+    @my_furries_bookings = current_user.bookings_as_owner
+  end
+
+  def update
+    @answer = params[:commit]
+    @booking = Booking.find(params[:id])
+    if @answer == "reject"
+      @booking.rejected!
+    elsif @anwser == "accept"
+      @booking.accepted!
+    end
+    redirect_to booking_path
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @furry = Furry.find(params[:furry_id])
@@ -32,6 +49,7 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to furry_path(@furry_id)
   end
+
 
   private
 
