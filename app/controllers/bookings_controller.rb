@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     if @answer == "reject"
       @booking.rejected!
-    elsif @anwser == "accept"
+    elsif @answer == "accept"
       @booking.accepted!
     end
     redirect_to booking_path
