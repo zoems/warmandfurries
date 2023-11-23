@@ -30,7 +30,7 @@
   background-color: $cardbackground;
 }
 
-.furries-card .content:hover {
+.furries-card:hover .content {
   background-color: $cardbackground2;
   ;
 }
@@ -173,10 +173,10 @@
   width: 100%;
   }
 
-  // .hide {
-  //   display: none;
+  .hide {
+    display: none;
+  }
 
-  //   &:hover {
-  //     display: block ;
-  //   }
-  // }
+  .myDIV:hover .hide {
+    display: block;
+  }
