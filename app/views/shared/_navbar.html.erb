@@ -26,7 +26,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active mx-3">
-            <%= link_to "Dashboard", "root_path", class: "btn nav-link" %>
+            <%= link_to "Dashboard", bookings_path, class: "btn nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
