@@ -51,8 +51,6 @@ address: "Ohlauer Str. 38, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "panda-furry.png", content_type: "image/png")
 
-
-
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700659424/raccoon-furry.png")
 furry = Furry.create(name: "Mischief Nightshade",
 description: "Mischief Nightshade, a raccoon whose fur is a canvas of moonlit grays and midnight blacks. Her masked face conceals a glint of mystery, and her agile paws, adorned with subtle crescent markings, move stealthily through the night. Mischief's presence is a celestial ballet, blending the intrigue of shadows with the allure of the nocturnal sky.",
@@ -63,8 +61,6 @@ address: "Revaler Str. 99, Berlin",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "raccoon-furry.png", content_type: "image/png")
 
-
-
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700740247/luna-howlheart.png")
 furry = Furry.create(name: "Wolfgang Howlheart",
   description: "Wolfgang Howlheart, a majestic wolf with a coat that shimmers like the moonlit night. With piercing amber eyes and a dignified demeanor, Luna roams the wilderness with grace and strength. A guardian spirit, Luna Howlheart embodies the wisdom of the wild.",
@@ -74,8 +70,6 @@ furry = Furry.create(name: "Wolfgang Howlheart",
   address: "Waldweg 7, Berlin",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "luna-howlheart.png", content_type: "image/png")
-
-
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700740003/whisker-whimsy.png")
 furry = Furry.create(name: "Shadowpaw Whimsy",
