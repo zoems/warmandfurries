@@ -1,0 +1,37 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  p {
+    color: $purple-1;
+    font-family: $body-font;
+  }
+  h2 {
+    font-family: $headers-font;
+  }
+  a:link {
+    text-decoration: none;
+    color: $purple-1;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: $purple-2;
+  }
+
+
+}
+
+.custom-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $purple-2 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $purple-1;
+}

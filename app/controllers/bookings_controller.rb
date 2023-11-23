@@ -16,14 +16,18 @@ class BookingsController < ApplicationController
 
     days_booked = params[:booking][:dates].split(" to ")
 
-    @booking.end_date = days_booked[1]
-    @booking.start_date = days_booked[0]
+    unless days_booked.empty?
+      @booking.end_date = days_booked[1]
+      @booking.start_date = days_booked[0]
 
-    range = (@booking.end_date - @booking.start_date).to_i
+      range = (@booking.end_date - @booking.start_date).to_i
+      @booking.total_cost = range * @furry.price
+      if @booking.save!
+        redirect_to furries_path
+      else
+        render "furries/show", status: :unprocessable_entity
+      end
 
-    @booking.total_cost = range * @furry.price
-    if @booking.save!
-      redirect_to furries_path
     else
       render "furries/show", status: :unprocessable_entity
     end
