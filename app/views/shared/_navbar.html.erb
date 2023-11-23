@@ -25,6 +25,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+        <div class="nav-item active">
+          <% if params[:controller] == "furries" && params[:action] == "index"%>
+            <%# <button class="btn nav-link">Show Map</button> %>
+            <%= link_to "Show Map", "map", class: "btn nav-link" %>
+          <% elsif params[:controller] == "furries" && params[:action] == "map"%>
+            <%# <button class="btn nav-link">Show Furries</button> %>
+            <%= link_to "Show Furries", "furries", class: "btn nav-link" %>
+
+          <% end %>
+        </div>
+
           <li class="nav-item active mx-3">
             <%= link_to "Dashboard", bookings_path, class: "btn nav-link" %>
           </li>
@@ -37,15 +48,17 @@
           </li>
         <% else %>
           <li class="nav-item">
+
           <div data-controller="toggle" >
+
             <button data-toggle-target="button" class="btn" data-action="click->toggle#show">Log in</button>
             <div class="d-none" data-toggle-target="toggleableElement">
               <%= render "devise/sessions/new" %>
-            </div>
           </div>
           </li>
         <% end %>
       </ul>
+
     </div>
     </div>
 </div>
