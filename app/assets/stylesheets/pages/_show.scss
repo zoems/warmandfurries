@@ -25,11 +25,27 @@
 
 .furry-description h5 {
   font-weight:bolder;
-  color: $purple-1;
   font-size: 32px;
+text-shadow: 2px 2px 1px $purple3;
+
 }
 
 .info-furry img {
   border-radius: 10px;
   margin-top: 30px;
+}
+
+.furry-description h1{
+  text-shadow: 3px 3px 2px $purple3;
+}
+
+.book-btn {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.book-card {
+  background-color: $cardbackground;
+  width: 500px;
+  padding:30px;
 }

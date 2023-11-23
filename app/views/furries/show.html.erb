@@ -1,22 +1,25 @@
-<div class="container" id="show-page">
-  <div class="d-flex info-furry justify-content-around">
+<div class="container">
+<div class="d-flex" id="show-page" justify-items-space-around>
+  <div class="info-furry d-flex">
     <div class="px-3 col-6">
       <%= cl_image_tag @furry.photo.key, height: 400, width: 400, crop: :fill %>
     </div>
       <div class="d-flex flex-column">
         <div class="furry-description col-9">
             <h1><%= @furry.name %></h1>
-              <h3><%= @furry.fursona %></h3>
             <p><%= @furry.description %></p>
-          <div>
-            <h5><%= @furry.price.to_i %><i class="fa-solid fa-euro-sign"></i> p. day</h5>
-          </div>
-            <br>
-            <br>
+              <div>
+                <h5><%= @furry.price.to_i %><i class="fa-solid fa-euro-sign"></i> p. day</h5>
+              </div>
+                <br>
+                <br>
+            <div class="book-card">
+              <div class="p-6 form-show col-6">
+                <%= render "bookings/form", booking: @booking, furry:@furry %>
+              </div>
+            </div>
         </div>
-      <div class="p-6 form-show col-6">
-        <%= render "bookings/form", booking: @booking, furry:@furry%>
       </div>
-    </div>
   </div>
+</div>
 </div>

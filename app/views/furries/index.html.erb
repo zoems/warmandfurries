@@ -2,7 +2,7 @@
     <div class="content">
       <div class="row">
             <% @furries.each do |furry| %>
-                <div class="furries-card hvr-grow">
+                <div class="furries-card hvr-grow myDIV">
                   <div class="image">
                     <%= cl_image_tag furry.photo.key, height: 350, width: 350, crop: :fill %>
                   </div>
