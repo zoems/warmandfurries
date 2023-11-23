@@ -6,4 +6,6 @@ class Furry < ApplicationRecord
   validates :description, presence: true
   validates :fursona, presence: true, inclusion: { in: %w[wolf fox dragon puppy cat racoon panda] }
   # validates :availability, default: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
