@@ -3,26 +3,12 @@ class FurriesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    current_user.nil? ?  @furries = Furry.all : @furries = Furry.where.not(user_id: current_user.id)
-    # key_skill if @furries[0].key_skill.nil?
+    current_user.nil? ? @furries = Furry.all : @furries = Furry.where.not(user_id: current_user.id)
     if params[:search].present?
       @query = params[:search][:query]
-      @furries = @furries.where("name ILIKE ?", "%#{@query}%")
+      @furries = @furries.where("fursona ILIKE ?", "%#{@query}%")
     end
   end
-
-  # def key_skill
-  #   @furries.map do |furry|
-  #   furry.key_skill = "Cuddleable"
-  #     if furry.cuddleable > furry.energy && furry.cuddleable > furry.tough_love
-  #       furry.key_skill = "Cuddleable"
-  #     elsif furry.tough_love > furry.energy && furry.tough_love > furry.cuddleable
-  #       furry.key_skill = "Tough Love"
-  #     elsif furry.energy > furry.tough_love && furry.energy > furry.cuddleable
-  #       furry.key_skill = "High Energy"
-  #     end
-  #   end
-  # end
 
   def map
     @furries = Furry.all
