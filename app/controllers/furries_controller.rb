@@ -38,10 +38,13 @@ class FurriesController < ApplicationController
 
   def show
     @booking = Booking.new
+     @today = Date.today.to_s
+
     # Get an array of hashes witht he start and end date
     @dates_booked = @furry.bookings.map do |booking|
       { from: booking[:start_date], to: booking[:end_date] }
     end
+
   end
 
   def new
