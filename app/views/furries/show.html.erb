@@ -6,8 +6,11 @@
     </div>
       <div class="d-flex flex-column">
         <div class="furry-description col-9">
+          <div class="d-inline-block m-3">
             <h1><%= @furry.name %></h1>
-            <p><%= @furry.description %></p>
+          </div>
+          </div>
+             <p><%= @furry.description %></p>
               <div>
                 <h5><%= @furry.price.to_i %> <i class="fa-solid fa-euro-sign"></i> p. day</h5>
               </div>
@@ -42,6 +45,7 @@
                 <%= render "bookings/form", booking: @booking, furry:@furry %>
               </div>
             </div>
+
         </div>
       </div>
   </div>
