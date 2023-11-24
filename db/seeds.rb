@@ -6,6 +6,8 @@ User.destroy_all
 
 user = User.create(email: "mawberrie@gmail.com", password: "helloworld")
 User.create(email: "alice@gmail.com", password: "123456")
+emma = User.create(email: "emma@lewagon.com", password: "123456")
+
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700660746/wolf-furry.png")
 furry = Furry.create(name: "Luna Nightpaw",
@@ -17,7 +19,7 @@ address: "Hauptstraße 13, Berlin",
 energy: 1,
 cuddleable: 2,
 tough_love: 5,
-user_id: user.id)
+user_id: emma.id)
 furry.photo.attach(io: file, filename: "wolf-furry.png", content_type: "image/png")
 
 
@@ -31,7 +33,7 @@ address: "Stresemannstraße 72, Berlin",
 energy: 4,
 cuddleable: 2,
 tough_love: 1,
-user_id: user.id)
+user_id: emma.id)
 furry.photo.attach(io: file, filename: "puppy-furry.png", content_type: "image/png")
 
 
@@ -45,7 +47,7 @@ address: "Thiemannstraße 1, Berlin",
 energy: 2,
 cuddleable: 3,
 tough_love: 5,
-user_id: user.id)
+user_id: emma.id)
 furry.photo.attach(io: file, filename: "cat-furry.png", content_type: "image/png")
 
 
@@ -60,7 +62,7 @@ address: "Ohlauer Str. 38, Berlin",
 energy: 5,
 cuddleable: 2,
 tough_love: 4,
-user_id: user.id)
+user_id: emma.id)
 
 furry.photo.attach(io: file, filename: "panda-furry.png", content_type: "image/png")
 
