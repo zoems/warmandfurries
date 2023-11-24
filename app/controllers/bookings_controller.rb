@@ -4,8 +4,22 @@ class BookingsController < ApplicationController
   def index
     @mybookings = current_user.bookings
     @myfurries = current_user.furries
+    # key_skill if @myfurries[0].key_skill.nil?
     @my_furries_bookings = current_user.bookings_as_owner
   end
+
+  # def key_skill
+  #   @myfurries.map do |furry|
+  #   furry.key_skill = "Cuddleable"
+  #     if furry.cuddleable > furry.energy && furry.cuddleable > furry.tough_love
+  #       furry.key_skill = "Cuddleable"
+  #     elsif furry.tough_love > furry.energy && furry.tough_love > furry.cuddleable
+  #       furry.key_skill = "Tough Love"
+  #     elsif furry.energy > furry.tough_love && furry.energy > furry.cuddleable
+  #       furry.key_skill = "High Energy"
+  #     end
+  #   end
+  # end
 
   def update
     @answer = params[:commit]

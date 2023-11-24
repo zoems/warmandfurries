@@ -1,0 +1,37 @@
+<div class="content" >
+      <div class="row">
+            <% my_furries_bookings.each do |booking| %>
+                <div class="furries-card hvr-grow myDIV">
+                  <div class="image">
+                    <%= cl_image_tag booking.furry.photo.key, height: 350, width: 350, crop: :fill %>
+                  </div>
+                  <div class="content">
+                    <div class="categories">
+                      <div class="badge">
+                          <div class="badge-base">
+                            <div class="text"><%= booking.furry.fursona %></div>
+                          </div>
+                      </div>
+                      <div class="badge">
+                          <div class="badge-base">
+                            <div class="text"><%= booking.furry.key_skill %></div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="heading-and-text">
+                      <div class="heading-and-icon">
+                        <div class="heading"><%= booking.furry.name %></div>
+                        <div class="icon-wrap">
+                        </div>
+                      </div>
+                      <p class="content-text hide">
+                        <%= booking.furry.description %>
+                      </p>
+                      <div class="price"><%= booking.furry.price.to_i%> <i class="fa-solid fa-euro-sign"></i></div>
+                    </div>
+                    <%= link_to '', furry_path(booking.furry), class: 'card-link' %>
+                  </div>
+                </div>
+            <% end %>
+      </div>
+    </div>
