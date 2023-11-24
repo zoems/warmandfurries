@@ -11,18 +11,6 @@ class FurriesController < ApplicationController
     end
   end
 
-  # def key_skill
-  #   @furries.map do |furry|
-  #   furry.key_skill = "Cuddleable"
-  #     if furry.cuddleable > furry.energy && furry.cuddleable > furry.tough_love
-  #       furry.key_skill = "Cuddleable"
-  #     elsif furry.tough_love > furry.energy && furry.tough_love > furry.cuddleable
-  #       furry.key_skill = "Tough Love"
-  #     elsif furry.energy > furry.tough_love && furry.energy > furry.cuddleable
-  #       furry.key_skill = "High Energy"
-  #     end
-  #   end
-  # end
 
   def map
     @furries = Furry.all
@@ -43,13 +31,12 @@ class FurriesController < ApplicationController
 
   def show
     @booking = Booking.new
-     @today = Date.today.to_s
+    @today = Date.today.to_s
 
     # Get an array of hashes witht he start and end date
     @dates_booked = @furry.bookings.map do |booking|
       { from: booking[:start_date], to: booking[:end_date] }
     end
-
   end
 
   def new
@@ -59,6 +46,7 @@ class FurriesController < ApplicationController
   def create
     @furry = Furry.new(furry_params)
     @furry.user = current_user
+    # raise
     if @furry.save
       redirect_to furries_path
     else
