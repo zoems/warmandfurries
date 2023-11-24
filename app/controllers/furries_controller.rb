@@ -38,7 +38,7 @@ class FurriesController < ApplicationController
 
   def my_furries
     @furries = Furry.where(user_id: current_user.id)
-    key_skill if !@furries.nil? || @furries[0].key_skill.nil?
+    # key_skill if !@furries.nil? || @furries[0].key_skill.nil?
   end
 
   def show
