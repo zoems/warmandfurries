@@ -12,10 +12,8 @@
           </div>
             <p><%= @furry.description %></p>
               <div>
-                <h5><%= @furry.price.to_i %> <i class="fa-solid fa-euro-sign"></i> p. day</h5>
+                <h2><%= @furry.price.to_i %> <i class="fa-solid fa-euro-sign"></i> p. day</h2>
               </div>
-                <br>
-                <br>
                 <p>Energy
                 <% @furry.energy.times do %>
                   <i class="fa-solid fa-star" style="color: #ffd43b;"></i>

@@ -1,11 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky px-3">
   <%# <div class="d-flex justify-content-between"> %>
+  <div class="d-flex">
     <div class="logo">
       <%= link_to root_path, class: "navbar-brand" do %>
         <i class="fa-solid fa-paw fa-beat fa-xl" style="color: #7743db;"></i>
       <% end %>
     </div>
-
+    <div class="page-show">
+      <h2>Warm & Furries</h2>
+    </div>
+    </div>
 
     <div class="nav-item search">
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
