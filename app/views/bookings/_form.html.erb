@@ -1,9 +1,10 @@
-<h2>Book this furry!</h2>
+<h3>Book this furry!</h3>
 <%= simple_form_for [furry, booking] do |f| %>
   <%= f.input :dates, as: :string, input_html: {
     data: {
       controller: "datepicker",
       datepicker_min_date_value: Date.today.to_s,
       datepicker_disable_value: @dates_booked } } %>
+<p>Total: <%= booking.total_cost %></p>
   <%= f.submit 'Send booking request', class: "btn book-btn" %>
 <% end %>
