@@ -10,10 +10,10 @@
         </div>
         <div class="notification-content">
           <div>
-            <p><small><%= booking.start_date %> - <%= booking.end_date %></small></p>
+            <p><small><%= booking.start_date %> to <%= booking.end_date %></small></p>
             <p><%= booking.furry.name %></p>
           </div>
-          <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
+          <h2 class="total-cost"><%=booking.total_cost.to_i%> €</h2>
         </div>
         <div class="notification-actions">
           <div>
@@ -34,7 +34,7 @@
   <h1>My furries that have been booked</h1>
   <%unless @my_furries_bookings.empty? %>
     <% @my_furries_bookings.each do |booking| %>
-      <div class="notification" >
+      <div class="notification">
         <div> <%=cl_image_tag booking.furry.photo.key, height: 80, width: 80, crop: :fill%>
         </div>
         <div class="notification-content">
@@ -44,16 +44,20 @@
           </div>
           <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
         </div>
-        <div class="notification-actions">
+        <% if booking.pending? %>
+        <div class="notification-actions d-flex flex-row justify-content-end">
           <div>
             <%= simple_form_for booking do |f| %>
-              <%= f.submit :accept, class: "btn" %>
+              <%= f.submit :accept, class: "btn mx-3" %>
           </div>
           <div>
-              <%= f.submit :reject, class: "btn" %>
+              <%= f.submit :reject, class: "btn mx-3" %>
             <% end %>
           </div>
         </div>
+        <% else %>
+            <%= render "booking_status", booking: booking %>
+        <% end %>
       </div>
     <% end %>
   <%else%>
