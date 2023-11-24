@@ -14,28 +14,23 @@
   flex-grow: 1;
 }
 
-.furry-description h3, p {
+.furry-description p {
   color: #d9e5ff;
 }
-
-.furry-description h3 {
-  opacity: 0.75;
-  text-shadow: 1px 1px 2px white;
-  }
 
 .furry-description h5 {
   font-weight:bolder;
   font-size: 32px;
-text-shadow: 2px 2px 1px $purple3;
-
+  text-shadow: 2px 2px 1px $purple3;
 }
 
 .info-furry img {
   border-radius: 10px;
   margin-top: 30px;
+  box-shadow: $purple3 3px 3px 6px 0px inset;
 }
 
-.furry-description h1{
+.furry-description h1, h3{
   text-shadow: 3px 3px 2px $purple3;
 }
 
@@ -46,6 +41,15 @@ text-shadow: 2px 2px 1px $purple3;
 
 .book-card {
   background-color: $cardbackground;
-  width: 500px;
+  width: 560px;
   padding:30px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: $purple3 3px 3px 6px 0px inset, $purple3 -3px -3px 6px 1px inset;
+}
+
+.show-fursona {
+  background-color: $purple-1;
+  border-radius: 30%;
+  padding-bottom: 0px;
 }
