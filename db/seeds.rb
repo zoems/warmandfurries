@@ -81,7 +81,7 @@ energy: 3,
 cuddleable: 2,
 tough_love: 1,
 key_skill: "High Energy",
-user_id: user.id)
+user_id: emma.id)
 furry.photo.attach(io: file, filename: "raccoon-furry.png", content_type: "image/png")
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700740247/luna-howlheart.png")
@@ -95,7 +95,7 @@ furry = Furry.create(name: "Wolfgang Howlheart",
   cuddleable: 2,
   tough_love: 5,
   key_skill: "Tough Love",
-  user_id: user.id)
+  user_id: emma.id)
 furry.photo.attach(io: file, filename: "luna-howlheart.png", content_type: "image/png")
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700740003/whisker-whimsy.png")
@@ -229,3 +229,46 @@ furry = Furry.create(name: "Cocoa Cuddlepaws",
   key_skill: "High Energy",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "cocoa-cuddlepaws.png", content_type: "image/png")
+
+
+
+# Booking.create(
+# start_date:DateTime.parse("")  Sun, 24 Dec 2023,
+# end_date: Wed, 27 Dec 2023,
+# status: "pending",
+# total_cost: 1950.0,
+# furry_id: 268,
+# user_id: 49,
+# dates: "2023-12-24 to 2023-12-27")
+
+# Booking.create(start_date: Fri, 08 Dec 2023,
+# end_date: Sat, 09 Dec 2023,
+# status: "accepted",
+# total_cost: 600.0,
+# furry_id: 260,
+# user_id: 48,
+# dates: "2023-12-08 to 2023-12-09")
+
+# Booking.create(start_date: Mon, 27 Nov 2023,
+# end_date: Thu, 30 Nov 2023,
+# status: "pending",
+# total_cost: 2100.0,
+# furry_id: 261,
+# user_id: 48,
+# dates: "2023-11-27 to 2023-11-30")
+
+# Booking.create(start_date: Sun, 26 Nov 2023,
+# end_date: Wed, 29 Nov 2023,
+# status: "accepted",
+# total_cost: 1500.0,
+# furry_id: 264,
+# user_id: 48,
+# dates: "2023-11-26 to 2023-11-29")
+
+# Booking.create(start_date: Sun, 10 Dec 2023,
+# end_date: Sat, 16 Dec 2023,
+# status: "rejected",
+# total_cost: 3000.0,
+# furry_id: 264,
+# user_id: 49,
+# dates: "2023-12-10 to 2023-12-16")
