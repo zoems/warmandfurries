@@ -11,8 +11,8 @@ class Furry < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   validates :energy, presence: { message: 'cannot be blank' }, numericality: { only_integer: true }
   validates :energy, numericality: { in: 1..5 }
-  validates :energy, presence: { message: 'cannot be blank' }, numericality: { only_integer: true }
+  validates :cuddleable, presence: { message: 'cannot be blank' }, numericality: { only_integer: true }
   validates :cuddleable, numericality: { in: 1..5 }
-  validates :energy, presence: { message: 'cannot be blank' }, numericality: { only_integer: true }
+  validates :tough_love, presence: { message: 'cannot be blank' }, numericality: { only_integer: true }
   validates :tough_love, numericality: { in: 1..5 }
 end

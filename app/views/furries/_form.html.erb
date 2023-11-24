@@ -2,7 +2,11 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%= f.input :fursona, collection: %w(wolf fox dragon puppy cat racoon panda) %>
+  <%= f.input :key_skill, collection: %w(Cuddleable Energy ToughLove) %>
+  <%= f.input :cuddleable %>
+  <%= f.input :energy %>
+  <%= f.input :tough_love %>
+  <%= f.input :fursona, collection: %w(Wolf Fox Puppy Cat Raccoon Panda) %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn" %>
 <% end %>

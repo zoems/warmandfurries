@@ -35,14 +35,16 @@
             <%= link_to "Show Map", "map", class: "btn nav-link" %>
           <% elsif params[:controller] == "furries" && params[:action] == "map"%>
             <%= link_to "Show Furries", "furries", class: "btn nav-link" %>
-          <% elsif params[:controller] == "bookings" && params[:action] == "index" %>
-            <%= link_to "My Furries", "my_furries", class: "btn nav-link" %>
-
           <% end %>
         </div>
 
           <li class="nav-item active mx-3">
+          <% if params[:controller] == "bookings" && params[:action] == "index"%>
+            <%= link_to "Home", root_path, class: "btn nav-link" %>
+
+          <% else %>
             <%= link_to "Dashboard", bookings_path, class: "btn nav-link" %>
+            <% end %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/emmvs", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

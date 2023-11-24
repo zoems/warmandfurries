@@ -29,13 +29,12 @@ class FurriesController < ApplicationController
 
   def show
     @booking = Booking.new
-     @today = Date.today.to_s
+    @today = Date.today.to_s
 
     # Get an array of hashes witht he start and end date
     @dates_booked = @furry.bookings.map do |booking|
       { from: booking[:start_date], to: booking[:end_date] }
     end
-
   end
 
   def new
@@ -45,6 +44,7 @@ class FurriesController < ApplicationController
   def create
     @furry = Furry.new(furry_params)
     @furry.user = current_user
+    # raise
     if @furry.save
       redirect_to furries_path
     else
