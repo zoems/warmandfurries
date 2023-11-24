@@ -1,40 +1,66 @@
 <%= render "shared/navbar"%>
 <div id= "dashboard">
   <h1 >My Bookings</h1>
-  <% @mybookings.each do |booking| %>
 
-    <div class="notification" style="<%= booking.rejected? ? 'border: 1px solid rgba(255, 0, 0, 0.5)' : 'border: rgba(0, 255, 0, 0.5);' %>" >
-      <div> <%=cl_image_tag booking.furry.photo.key, height: 80, width: 80, crop: :fill%>
-      </div>
-      <div class="notification-content">
-        <div>
-          <p><small><%= booking.start_date %> - <%= booking.end_date %></small></p>
-          <p><%= booking.furry.name %></p>
+
+  <% unless @mybookings.empty? %>
+    <% @mybookings.each do |booking| %>
+      <div class="notification" style="<%= booking.rejected? ? 'border: 1px solid rgba(255, 0, 0, 0.5)' : 'border: rgba(0, 255, 0, 0.5);' %>" >
+        <div> <%=cl_image_tag booking.furry.photo.key, height: 80, width: 80, crop: :fill%>
         </div>
-        <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
-      </div>
-      <div class="notification-actions">
-        <div>
-          <%= render "booking_status", booking: booking %>
+        <div class="notification-content">
+          <div>
+            <p><small><%= booking.start_date %> - <%= booking.end_date %></small></p>
+            <p><%= booking.furry.name %></p>
+          </div>
+          <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
         </div>
-        <div>
-          <%= link_to "Cancel This Booking", booking_path(booking), data:{turbo_method: :delete}, class: "btn delete"%>
+        <div class="notification-actions">
+          <div>
+            <%= render "booking_status", booking: booking %>
+          </div>
+          <div>
+            <%= link_to "Cancel This Booking", booking_path(booking), data:{turbo_method: :delete}, class: "btn delete"%>
+          </div>
         </div>
       </div>
+    <% end %>
+  <% else %>
+    <div class="notification">
+      <h3>You havent booked an emotional support furry yet! </h3>
     </div>
   <% end %>
-</div>
 
   <h1>My furries that have been booked</h1>
-
-  <%if !@my_furries_bookings.nil? %>
-
-    <%= render "cards_booked_furries", my_furries_bookings: @my_furries_bookings%>
-
-  <% else %>
-    <h3>No bookings yet .. try spicing up your profile<h3>
-  <%end%>
-
+  <%unless @my_furries_bookings.empty? %>
+    <% @my_furries_bookings.each do |booking| %>
+      <div class="notification" >
+        <div> <%=cl_image_tag booking.furry.photo.key, height: 80, width: 80, crop: :fill%>
+        </div>
+        <div class="notification-content">
+          <div>
+            <p><small><%= booking.start_date %> - <%= booking.end_date %></small></p>
+            <p><%= booking.furry.name %></p>
+          </div>
+          <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
+        </div>
+        <div class="notification-actions">
+          <div>
+            <%= simple_form_for booking do |f| %>
+              <%= f.submit :accept, class: "btn" %>
+          </div>
+          <div>
+              <%= f.submit :reject, class: "btn" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <%else%>
+    <div class="notification">
+      <h3>No bookings yet .. try spicing up your furries' profile.<h3>
+    </div>
+  <% end %>
 
 
 </div>
