@@ -31,7 +31,7 @@
           <% elsif params[:controller] == "furries" && params[:action] == "map"%>
             <%= link_to "Show Furries", "furries", class: "btn nav-link" %>
           <% elsif params[:controller] == "bookings" && params[:action] == "index" %>
-            <%= link_to "Show Furries", "furries", class: "btn nav-link" %>
+            <%= link_to "My Furries", "my_furries", class: "btn nav-link" %>
 
           <% end %>
         </div>
@@ -40,7 +40,7 @@
             <%= link_to "Dashboard", bookings_path, class: "btn nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/emmvs", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://res.cloudinary.com/dbd4uen7z/image/upload/v1700822644/emma.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="z-index: 1000";>
               <%#= link_to "Action", "#", class: "dropdown-item" %>
