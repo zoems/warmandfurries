@@ -44,7 +44,7 @@
   padding-top: 15px;
   color:$purple-2;
   text-shadow: 1px 1px 2px rgb(198, 121, 240), 0 0 1em rgb(48, 26, 67), 0 0 0.2em rgb(66, 31, 119);
-  margin: 0px 15px;
+  margin: 15px 15px;
 }
 
 .nav-item {
@@ -55,9 +55,18 @@
   background-color: $purple3;
   border-radius: 10px;
   color: $content_text_blue;
+  transition: ease .3s;
+  color: $white_5;
 }
 
-.dropdown-menu:hover, .dropdown-item:hover{
+.dropdown-item:hover{
   background-color: $purple-1;
-  color: $content_text_blue;
+  color: $white_5;
+}
+
+.page-name h2{
+  color: $purple-5;
+  font-family: Luckiest Guy;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgb(48, 4, 71), 0 0 1em rgb(48, 26, 67), 0 0 0.2em rgb(66, 31, 119);
 }
