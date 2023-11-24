@@ -47,7 +47,7 @@ class BookingsController < ApplicationController
   def destroy
     @furry_id = @booking.furry_id
     @booking.destroy
-    redirect_to furry_path(@furry_id)
+    redirect_to bookings_path
   end
 
 

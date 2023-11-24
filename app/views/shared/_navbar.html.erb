@@ -30,8 +30,8 @@
             <%= link_to "Show Map", "map", class: "btn nav-link" %>
           <% elsif params[:controller] == "furries" && params[:action] == "map"%>
             <%= link_to "Show Furries", "furries", class: "btn nav-link" %>
-          <% else %>
-            <%= link_to "Home", "furries", class: "btn nav-link" %>
+          <% elsif params[:controller] == "bookings" && params[:action] == "index" %>
+            <%= link_to "My Furries", "my_furries", class: "btn nav-link" %>
 
           <% end %>
         </div>
