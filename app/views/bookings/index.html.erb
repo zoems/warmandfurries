@@ -2,6 +2,7 @@
 <div id= "dashboard">
   <h1 >My Bookings</h1>
 
+
   <% unless @mybookings.empty? %>
     <% @mybookings.each do |booking| %>
       <div class="notification" style="<%= booking.rejected? ? 'border: 1px solid rgba(255, 0, 0, 0.5)' : 'border: rgba(0, 255, 0, 0.5);' %>" >
@@ -60,5 +61,6 @@
       <h3>No bookings yet .. try spicing up your furries' profile.<h3>
     </div>
   <% end %>
+
 
 </div>

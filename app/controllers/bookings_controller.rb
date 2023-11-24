@@ -4,8 +4,10 @@ class BookingsController < ApplicationController
   def index
     @mybookings = current_user.bookings
     @myfurries = current_user.furries
+    # key_skill if @myfurries[0].key_skill.nil?
     @my_furries_bookings = current_user.bookings_as_owner
   end
+
 
   def update
     @answer = params[:commit]
@@ -34,7 +36,7 @@ class BookingsController < ApplicationController
       range = (@booking.end_date - @booking.start_date).to_i
       @booking.total_cost = range * @furry.price
       if @booking.save!
-        redirect_to furries_path
+        redirect_to bookings_path
       else
         render "furries/show", status: :unprocessable_entity
       end
