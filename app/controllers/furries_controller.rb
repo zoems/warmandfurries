@@ -12,6 +12,7 @@ class FurriesController < ApplicationController
   end
 
   def key_skill
+    furry.key_skill = "Cuddleable"
     @furries.each do |furry|
       if furry.cuddleable > furry.energy && furry.cuddleable > furry.tough_love
         furry.key_skill = "Cuddleable"
@@ -19,8 +20,6 @@ class FurriesController < ApplicationController
         furry.key_skill = "Tough Love"
       elsif furry.energy > furry.tough_love && furry.energy > furry.cuddleable
         furry.key_skill = "High Energy"
-      else
-        furry.key_skill = "Cuddleable"
       end
     end
   end
