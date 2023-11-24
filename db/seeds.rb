@@ -232,37 +232,43 @@ furry.photo.attach(io: file, filename: "cocoa-cuddlepaws.png", content_type: "im
 
 
 
-Booking.create(
-status: "pending",
-total_cost: 1950.0,
-furry_id: 268,
-user_id: emma.id,
-dates: "2023-12-24 to 2023-12-27")
+# Booking.create(
+# start_date:DateTime.parse("")  Sun, 24 Dec 2023,
+# end_date: Wed, 27 Dec 2023,
+# status: "pending",
+# total_cost: 1950.0,
+# furry_id: 268,
+# user_id: 49,
+# dates: "2023-12-24 to 2023-12-27")
 
-Booking.create(
-status: "accepted",
-total_cost: 600.0,
-furry_id: 260,
-user_id: alice.id,
-dates: "2023-12-08 to 2023-12-09")
+# Booking.create(start_date: Fri, 08 Dec 2023,
+# end_date: Sat, 09 Dec 2023,
+# status: "accepted",
+# total_cost: 600.0,
+# furry_id: 260,
+# user_id: 48,
+# dates: "2023-12-08 to 2023-12-09")
 
-Booking.create(
-status: "pending",
-total_cost: 2100.0,
-furry_id: 261,
-user_id: alice.id,
-dates: "2023-11-27 to 2023-11-30")
+# Booking.create(start_date: Mon, 27 Nov 2023,
+# end_date: Thu, 30 Nov 2023,
+# status: "pending",
+# total_cost: 2100.0,
+# furry_id: 261,
+# user_id: 48,
+# dates: "2023-11-27 to 2023-11-30")
 
-Booking.create(
-status: "accepted",
-total_cost: 1500.0,
-furry_id: 264,
-user_id: alice.id,
-dates: "2023-11-26 to 2023-11-29")
+# Booking.create(start_date: Sun, 26 Nov 2023,
+# end_date: Wed, 29 Nov 2023,
+# status: "accepted",
+# total_cost: 1500.0,
+# furry_id: 264,
+# user_id: 48,
+# dates: "2023-11-26 to 2023-11-29")
 
-Booking.create(
-status: "rejected",
-total_cost: 3000.0,
-furry_id: 264,
-user_id: emma.id,
-dates: "2023-12-10 to 2023-12-16")
+# Booking.create(start_date: Sun, 10 Dec 2023,
+# end_date: Sat, 16 Dec 2023,
+# status: "rejected",
+# total_cost: 3000.0,
+# furry_id: 264,
+# user_id: 49,
+# dates: "2023-12-10 to 2023-12-16")
