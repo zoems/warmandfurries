@@ -2,12 +2,12 @@
 <div id= "dashboard">
   <h1 >My Bookings</h1>
   <% @mybookings.each do |booking| %>
-    <div class="notification">
+    <div class="notification" style="<%= booking.rejected? ? 'border: 1px solid rgba(255, 0, 0, 0.5)' : 'border: rgba(0, 255, 0, 0.5);' %>" >
   <div> <%=cl_image_tag booking.furry.photo.key, height: 80, width: 80, crop: :fill%> </div>
   <div class="notification-content">
     <div>
       <p><small><%= booking.start_date %> - <%= booking.end_date %></small></p>
-      <p style="<%= booking.rejected? ? 'color: rgba(255, 0, 0, 0.5);' : 'color: rgba(0, 255, 0, 0.5);' %>"><%= booking.furry.name %></p>
+      <p><%= booking.furry.name %></p>
     </div>
     <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
   </div>
@@ -15,6 +15,7 @@
   <div class="notification-actions">
     <%= render "booking_status", booking: booking %>
     <a href="">Delete <i class="far fa-trash-alt"></i></a>
+    <%= link_to "Cancel this booking", booking_path(booking), data:{turbo_method: :delete}, class: "far fa-trash-alt"%>
   </div>
 </div>
   <% end %>
