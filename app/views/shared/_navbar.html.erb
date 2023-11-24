@@ -1,10 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky px-3">
   <%# <div class="d-flex justify-content-between"> %>
-    <div class="logo">
+  <div class="d-flex">
+  <div class="logo">
       <%= link_to root_path, class: "navbar-brand" do %>
         <i class="fa-solid fa-paw fa-beat fa-xl" style="color: #7743db;"></i>
       <% end %>
     </div>
+    <div class="page-name">
+    <h2>Warm & Furries</h2>
+    </div>
+  </div>
 
 
     <div class="nav-item search">
@@ -43,6 +48,8 @@
             <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown";>
               <%#= link_to "Action", "#", class: "dropdown-item" %>
+                <%= link_to "My Furries", my_furries_path, class: "dropdown-item" %>
+
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
 
             </div>

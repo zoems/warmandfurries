@@ -15,10 +15,10 @@
 }
 
 .furry-description p {
-  color: #d9e5ff;
+  color: $content_text_blue;
 }
 
-.furry-description h5 {
+.furry-description h5, h2 {
   font-weight:bolder;
   font-size: 32px;
   text-shadow: 2px 2px 1px $purple3;
