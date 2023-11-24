@@ -23,7 +23,7 @@ export default class extends Controller {
     //   this.searchbarTarget.classList.remove("d-none")
     // } else {
     //   this.searchbarTarget.classList.add("d-none")
-   }
+    }
   }
 
 }

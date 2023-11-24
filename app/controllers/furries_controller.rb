@@ -4,9 +4,24 @@ class FurriesController < ApplicationController
 
   def index
     @furries = Furry.all
+    key_skill if @furries[0].key_skill.nil?
     if params[:search].present?
       @query = params[:search][:query]
       @furries = @furries.where("name ILIKE ?", "%#{@query}%")
+    end
+  end
+
+  def key_skill
+    @furries.each do |furry|
+      if furry.cuddleable > furry.energy && furry.cuddleable > furry.tough_love
+        furry.key_skill = "Cuddleable"
+      elsif furry.tough_love > furry.energy && furry.tough_love > furry.cuddleable
+        furry.key_skill = "Tough Love"
+      elsif furry.energy > furry.tough_love && furry.energy > furry.cuddleable
+        furry.key_skill = "High Energy"
+      else
+        furry.key_skill = "Cuddleable"
+      end
     end
   end
 
