@@ -4,6 +4,9 @@ class FurriesController < ApplicationController
 
   def index
     @furries = Furry.all
+    @furries = Furry.where.not(user_id: current_user.id)
+
+
     key_skill if @furries[0].key_skill.nil?
     if params[:search].present?
       @query = params[:search][:query]
