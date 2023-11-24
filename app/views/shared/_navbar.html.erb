@@ -41,9 +41,10 @@
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="z-index: 1000";>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown";>
               <%#= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+
             </div>
           </li>
         <% else %>

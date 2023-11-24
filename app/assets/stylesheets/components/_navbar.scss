@@ -51,3 +51,13 @@
   margin: 0px 15px;
 }
 
+.dropdown-item, .dropdown-menu{
+  background-color: $purple3;
+  border-radius: 10px;
+  color: $content_text_blue;
+}
+
+.dropdown-menu:hover, .dropdown-item:hover{
+  background-color: $purple-1;
+  color: $content_text_blue;
+}
