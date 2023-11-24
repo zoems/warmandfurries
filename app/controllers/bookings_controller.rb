@@ -4,8 +4,10 @@ class BookingsController < ApplicationController
   def index
     @mybookings = current_user.bookings
     @myfurries = current_user.furries
+    # key_skill if @myfurries[0].key_skill.nil?
     @my_furries_bookings = current_user.bookings_as_owner
   end
+
 
   def update
     @answer = params[:commit]

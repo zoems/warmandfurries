@@ -2,6 +2,7 @@
 <div id= "dashboard">
   <h1 >My Bookings</h1>
   <% @mybookings.each do |booking| %>
+
     <div class="notification" style="<%= booking.rejected? ? 'border: 1px solid rgba(255, 0, 0, 0.5)' : 'border: rgba(0, 255, 0, 0.5);' %>" >
       <div> <%=cl_image_tag booking.furry.photo.key, height: 80, width: 80, crop: :fill%>
       </div>
@@ -27,30 +28,9 @@
   <h1>My furries that have been booked</h1>
 
   <%if !@my_furries_bookings.nil? %>
-    <% @my_furries_bookings.each do |booking| %>
-      <div class="container" id="show-page">
-        <div class="d-flex info-furry justify-content-around">
-          <div class="px-3 col-6">
-            <%= cl_image_tag booking.furry.photo.key, height: 400, width: 400, crop: :fill %>
-          </div>
-            <div class="d-flex flex-column">
-              <div class="furry-description col-9">
-                  <h1><%= booking.furry.name %></h1>
-                    <h3><%= booking.furry.fursona %></h3>
-                  <p><%= booking.furry.description %></p>
-                <div>
-                  <h5><%= booking.furry.price.to_i %><i class="fa-solid fa-euro-sign"></i> p. day</h5>
-                </div>
-                  <br>
-                  <br>
-              </div>
-            <div class="p-6 form-show col-6">
-              <%= render "update_booking", booking: booking %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <%end%>
+
+    <%= render "cards_booked_furries", my_furries_bookings: @my_furries_bookings%>
+
   <% else %>
     <h3>No bookings yet .. try spicing up your profile<h3>
   <%end%>

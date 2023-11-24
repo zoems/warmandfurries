@@ -5,7 +5,7 @@ Furry.destroy_all
 User.destroy_all
 
 user = User.create(email: "mawberrie@gmail.com", password: "helloworld")
-User.create(email: "alice@gmail.com", password: "123456")
+alice = User.create(email: "alice@gmail.com", password: "123456")
 emma = User.create(email: "emma@lewagon.com", password: "123456")
 
 
@@ -19,8 +19,11 @@ address: "Hauptstraße 13, Berlin",
 energy: 1,
 cuddleable: 2,
 tough_love: 5,
+key_skill: "Tough Love",
 user_id: emma.id)
 furry.photo.attach(io: file, filename: "wolf-furry.png", content_type: "image/png")
+
+# Booking.create(start_date: "2023-12-4", end_date: "2023-12-6", status: "pending", total_cost: 960, furry_id: furry.id , user_id: alice.id)
 
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700659654/puppy-furry.png")
@@ -33,8 +36,10 @@ address: "Stresemannstraße 72, Berlin",
 energy: 4,
 cuddleable: 2,
 tough_love: 1,
+key_skill: "High Energy",
 user_id: emma.id)
 furry.photo.attach(io: file, filename: "puppy-furry.png", content_type: "image/png")
+# Booking.create(start_date: "2023-12-13", end_date: "2023-12-26", status: "pending", total_cost: 550 * 13, furry_id: furry.id , user_id: alice.id)
 
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700659654/cat-furry.png")
@@ -47,10 +52,9 @@ address: "Thiemannstraße 1, Berlin",
 energy: 2,
 cuddleable: 3,
 tough_love: 5,
+key_skill: "Tough Love",
 user_id: emma.id)
 furry.photo.attach(io: file, filename: "cat-furry.png", content_type: "image/png")
-
-
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700659654/panda-furry.png")
 furry = Furry.create(name: "Dingdong Ironclaw",
@@ -62,8 +66,8 @@ address: "Ohlauer Str. 38, Berlin",
 energy: 5,
 cuddleable: 2,
 tough_love: 4,
+key_skill: "High Energy",
 user_id: emma.id)
-
 furry.photo.attach(io: file, filename: "panda-furry.png", content_type: "image/png")
 
 file = URI.open("https://res.cloudinary.com/dbd4uen7z/image/upload/v1700659424/raccoon-furry.png")
@@ -76,6 +80,7 @@ address: "Revaler Str. 99, Berlin",
 energy: 3,
 cuddleable: 2,
 tough_love: 1,
+key_skill: "High Energy",
 user_id: user.id)
 furry.photo.attach(io: file, filename: "raccoon-furry.png", content_type: "image/png")
 
@@ -89,6 +94,7 @@ furry = Furry.create(name: "Wolfgang Howlheart",
   energy: 1,
   cuddleable: 2,
   tough_love: 5,
+  key_skill: "Tough Love",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "luna-howlheart.png", content_type: "image/png")
 
@@ -99,9 +105,10 @@ furry = Furry.create(name: "Shadowpaw Whimsy",
   fursona: "Cat",
   availability: true,
   address: "Großbeerenstraße 4, Berlin",
-  energy: 4,
-  cuddleable: 3,
+  energy: 3,
+  cuddleable: 5,
   tough_love: 1,
+  key_skill: "Cuddleable",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "whisker-whimsy.png", content_type: "image/png")
 
@@ -116,6 +123,7 @@ furry = Furry.create(name: "Panda Pawsitive",
   energy: 2,
   cuddleable: 4,
   tough_love: 1,
+  key_skill: "Cuddleable",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "panda-pawsitive.png", content_type: "image/png")
 
@@ -129,6 +137,7 @@ furry = Furry.create(name: "Rascal Ringer",
   energy: 3,
   cuddleable: 1,
   tough_love: 5,
+  key_skill: "Tough Love",
   user_id: user.id)
   furry.photo.attach(io: file, filename: "rascal-ringer.png", content_type: "image/png")
 
@@ -142,6 +151,7 @@ furry = Furry.create(name: "Sunny Purrsona",
   energy: 2,
   cuddleable: 4,
   tough_love: 1,
+  key_skill: "Cuddleable",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "purrsona.png", content_type: "image/png")
 
@@ -156,6 +166,7 @@ furry = Furry.create(name: "Bamboo Bouncer",
   energy: 5,
   cuddleable: 4,
   tough_love: 1,
+  key_skill: "High Energy",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "bamboo-bouncer.png", content_type: "image/png")
 
@@ -170,6 +181,7 @@ furry = Furry.create(name: "Shadow Stalker",
   energy: 2,
   cuddleable: 5,
   tough_love: 4,
+  key_skill: "Cuddleable",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "shadow-stalker.png", content_type: "image/png")
 
@@ -184,6 +196,7 @@ furry = Furry.create(name: "Whisker Wonderland",
   energy: 4,
   cuddleable: 3,
   tough_love: 2,
+  key_skill: "High Energy",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "whisker-wonderland.png", content_type: "image/png")
 
@@ -195,9 +208,10 @@ furry = Furry.create(name: "Sly Slyberry",
   fursona: "Raccoon",
   availability: true,
   address: "Admiralstraße, 10967 Berlin",
-  energy: 5,
-  cuddleable: 4,
-  tough_love: 5,
+  energy: 3,
+  cuddleable: 5,
+  tough_love: 1,
+  key_skill: "Cuddleable",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "slyberry.png", content_type: "image/png")
 
@@ -212,5 +226,6 @@ furry = Furry.create(name: "Cocoa Cuddlepaws",
   energy: 4,
   cuddleable: 3,
   tough_love: 1,
+  key_skill: "High Energy",
   user_id: user.id)
 furry.photo.attach(io: file, filename: "cocoa-cuddlepaws.png", content_type: "image/png")
