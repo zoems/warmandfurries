@@ -1,7 +1,7 @@
 <% if booking.status == "rejected" %>
-<div class= "btn btn-red">Booking Declined</div>
+<div class= "status-red">Booking Declined</div>
 <% elsif booking.status == "accepted" %>
-<div class= "btn btn-red">Booking Confirmed</div>
+<div class= "status-green">Booking Confirmed</div>
 <% else %>
-<div class= "btn btn-red">Pending Booking Confirmation</div>
+<div class= "status-purple">Pending Booking Confirmation</div>
 <% end %>
