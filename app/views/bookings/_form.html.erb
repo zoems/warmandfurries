@@ -1,10 +1,13 @@
+<div data-controller="datepicker" data-datepicker-disabled-value="<%= @dates_booked.to_json %>" data-datepicker-min-date-value="<%= @today %>" data-datepicker-price-value="<%= furry.price.to_i %>">
+
 <h3>Book this furry!</h3>
+<h3 data-datepicker-target="total"></h3>
 <%= simple_form_for [furry, booking] do |f| %>
-  <%= f.input :dates, as: :string, input_html: {
+  <%= f.input :dates, as: :string,  input_html: {
     data: {
-      controller: "datepicker",
-      datepicker_min_date_value: Date.today.to_s,
-      datepicker_disable_value: @dates_booked } } %>
-<p>Total: <%= booking.total_cost %></p>
+      datepicker_target: "calendar",
+      } } %>
+
   <%= f.submit 'Send booking request', class: "btn book-btn" %>
 <% end %>
+</div>
