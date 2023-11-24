@@ -20,37 +20,6 @@
 </div>
   <% end %>
 
-  <h1 >My Furries</h1>
-  <% if !@myfurries.nil? %>
-    <% @myfurries.each do |furry| %>
-      <div class="container" id="show-page">
-        <div class="d-flex info-furry justify-content-around">
-          <div class="px-3 col-6">
-            <%= cl_image_tag furry.photo.key, height: 400, width: 400, crop: :fill %>
-          </div>
-            <div class="d-flex flex-column">
-              <div class="furry-description col-9">
-                  <h1><%= furry.name %></h1>
-                    <h3><%= furry.fursona %></h3>
-                  <p><%= furry.description %></p>
-                <div>
-                  <h5><%= furry.price.to_i %><i class="fa-solid fa-euro-sign"></i> p. day</h5>
-                </div>
-                  <br>
-                  <br>
-              </div>
-            <div class="p-6 form-show col-6">
-              <%#= Link_to "edit_furry", furry: furry %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-
-  <%else%>
-    <%= Link_to new_furry_path  %>
-  <% end %>
-
   <h1>My furries that have been booked</h1>
 
   <%if !@my_furries_bookings.nil? %>

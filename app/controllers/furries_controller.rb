@@ -36,6 +36,11 @@ class FurriesController < ApplicationController
     end
   end
 
+  def my_furries
+    @furries = Furry.where(user_id: current_user.id)
+    key_skill if @furries[0].key_skill.nil?
+  end
+
   def show
     @booking = Booking.new
     # Get an array of hashes witht he start and end date

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "map", to: "furries#map"
+  get "my_furries", to: "furries#my_furries"
 
   # Defines the root path route ("/")
   root "furries#index"
