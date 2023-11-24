@@ -27,11 +27,11 @@
         <% if user_signed_in? %>
         <div class="nav-item active">
           <% if params[:controller] == "furries" && params[:action] == "index"%>
-            <%# <button class="btn nav-link">Show Map</button> %>
             <%= link_to "Show Map", "map", class: "btn nav-link" %>
           <% elsif params[:controller] == "furries" && params[:action] == "map"%>
-            <%# <button class="btn nav-link">Show Furries</button> %>
             <%= link_to "Show Furries", "furries", class: "btn nav-link" %>
+          <% else %>
+            <%= link_to "Home", "furries", class: "btn nav-link" %>
 
           <% end %>
         </div>

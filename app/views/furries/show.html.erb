@@ -12,15 +12,40 @@
           </div>
              <p><%= @furry.description %></p>
               <div>
-                <h5><%= @furry.price.to_i %><i class="fa-solid fa-euro-sign"></i> p. day</h5>
+                <h5><%= @furry.price.to_i %> <i class="fa-solid fa-euro-sign"></i> p. day</h5>
               </div>
                 <br>
                 <br>
-             <div class="book-card">
-      <div class="p-6 form-show col-6">
-         <%= render "bookings/form", booking: @booking, furry:@furry %>
-      </div>
-      </div>
+                <p>Energy
+                <% @furry.energy.times do %>
+                  <i class="fa-solid fa-star" style="color: #ffd43b;"></i>
+                <% end %>
+                <% (5 - @furry.energy).times do %>
+                  <i class="fa-regular fa-star" style="color: #ffd43b;"></i>
+                <% end %>
+                </p>
+                <p>Cuddleable
+                <% @furry.cuddleable.times do %>
+                  <i class="fa-solid fa-star" style="color: #ffd43b;"></i>
+                <% end %>
+                <% (5 - @furry.cuddleable).times do %>
+                  <i class="fa-regular fa-star" style="color: #ffd43b;"></i>
+                <% end %>
+                </p>
+                <p>Tough Love
+                <% @furry.tough_love.times do %>
+                  <i class="fa-solid fa-star" style="color: #ffd43b;"></i>
+                <% end %>
+                <% (5 - @furry.tough_love).times do %>
+                  <i class="fa-regular fa-star" style="color: #ffd43b;"></i>
+                <% end %>
+                </p>
+            <div class="book-card">
+              <div class="p-6 form-show col-6">
+                <%= render "bookings/form", booking: @booking, furry:@furry %>
+              </div>
+            </div>
+
         </div>
       </div>
   </div>
