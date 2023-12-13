@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Warm and Furries! 
+Ruby on Rails app Created with Jamie Borg and Iratxe Garrido.
+
+CHECK IT OUT! 
+https://airbnb-zoems-1612df5250d2.herokuapp.com/
