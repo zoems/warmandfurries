@@ -1,3 +1,6 @@
+![Static Badge](https://img.shields.io/badge/stage-production-orange)
+![Static Badge](https://img.shields.io/badge/Build_Status-pending-yellow)
+![master](https://img.shields.io/github/last-commit/badges/shields/master)
 # Warm and Furries
 
 Warm and Furries is a Ruby on Rails web application created by Zoe Mawby Smart, [Jamie Borg](https://github.com/jamieborg) and [Iratxe Garrido](https://github.com/IratxeGarrido).
@@ -19,31 +22,24 @@ Visit [Warm and Furries](https://airbnb-zoems-1612df5250d2.herokuapp.com/) to ex
 To install Warm and Furries locally, follow these steps:
 
 1. Clone the repository:
+```bash
 git clone https://github.com/your-username/warm-and-furries.git
-
-markdown
-Copy code
-
+```
 2. Install dependencies:
-```ruby
+```bash
 bundle install
 ```
 
-javascript
-Copy code
-
 3. Set up the database:
+```bash
 rails db:create
 rails db:migrate
-
-markdown
-Copy code
+```
 
 4. Start the Rails server:
+```bash
 rails server
-
-less
-Copy code
+```
 
 5. Visit `http://localhost:3000` in your browser to view the application.
 
