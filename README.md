@@ -13,7 +13,7 @@ Visit [Warm and Furries](https://airbnb-zoems-1612df5250d2.herokuapp.com/) to ex
 **please note the site has some areas still under construction
 
 ## Features
-- Search for all sorts of emotional support animals through key words name or with the map!
+- Search for all sorts of emotional support animals through key words name or with the map
 - Browse listings with detailed information and photos
 - Book accommodations securely through the platform
 - Manage bookings and postings with a personal user dashboard
