@@ -1,6 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/stage-production-orange)
 ![Static Badge](https://img.shields.io/badge/build_status-pending-yellow)
 ![master](https://img.shields.io/github/last-commit/badges/shields/master)
+https://airbnb-zoems-1612df5250d2.herokuapp.com/map 
 
 # Warm and Furries
 Warm and Furries is a Ruby on Rails web application created by Zoe Mawby Smart, [Jamie Borg](https://github.com/jamieborg) and [Iratxe Garrido](https://github.com/IratxeGarrido). This project was our first project in an intensive web-developement bootcamp at Le Wagon Berlin.
