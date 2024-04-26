@@ -12,8 +12,10 @@ class BookingsController < ApplicationController
   def update
     @answer = params[:commit]
     @booking = Booking.find(params[:id])
+
     if @answer == "reject"
       @booking.rejected!
+
     elsif @answer == "accept"
       @booking.accepted!
     end

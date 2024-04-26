@@ -30,8 +30,9 @@
       <h3>You havent booked an emotional support furry yet! </h3>
     </div>
   <% end %>
-
+  <div class="pt-3">
   <h1>My furries that have been booked</h1>
+  </div>
   <%unless @my_furries_bookings.empty? %>
     <% @my_furries_bookings.each do |booking| %>
       <div class="notification">
@@ -42,7 +43,7 @@
             <p><small><%= booking.start_date %> - <%= booking.end_date %></small></p>
             <p><%= booking.furry.name %></p>
           </div>
-          <h2 class="total-cost"><%=booking.total_cost%>Euros</h2>
+          <h2 class="total-cost"><%=booking.total_cost.to_i%> €</h2>
         </div>
         <% if booking.pending? %>
         <div class="notification-actions d-flex flex-row justify-content-end">

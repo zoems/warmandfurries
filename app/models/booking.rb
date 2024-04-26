@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :furry
   belongs_to :user
-  validates :start_date, :end_date, presence: true # availability: true
+  # validates :start_date, :end_date, presence: true # availability: true
   validate :end_date_after_start_date
   validates :status, presence: true
   enum status: [ :pending, :rejected, :accepted ]
