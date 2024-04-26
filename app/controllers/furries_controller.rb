@@ -1,6 +1,6 @@
 class FurriesController < ApplicationController
   before_action :set_furry, only: %i[show destroy]
-  skip_before_action :authenticate_user!, only: %i[index show]
+  skip_before_action :authenticate_user!, only: %i[index show map]
 
   def index
     current_user.nil? ? @furries = Furry.all : @furries = Furry.where.not(user_id: current_user.id)

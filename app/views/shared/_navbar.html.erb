@@ -57,15 +57,20 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
+          <%# <li class="nav-item"> %>
+          <div class="nav-item active">
+          <% if params[:controller] == "furries" && params[:action] == "index"%>
+            <%= link_to "Show Map", "map", class: "btn nav-link" %>
 
+          <% end %>
+        </div>
           <div data-controller="toggle" >
 
             <button data-toggle-target="button" class="btn" data-action="click->toggle#show">Log in</button>
             <div class="d-none" data-toggle-target="toggleableElement">
               <%= render "devise/sessions/new" %>
           </div>
-          </li>
+          <%# </li> %>
         <% end %>
       </ul>
 
